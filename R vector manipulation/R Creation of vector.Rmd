@@ -1,0 +1,64 @@
+---
+title: "VECOR MANIPULATION"
+author: "SHA"
+date: "January 20, 2018"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+# Creation of a vector
+sha <- c(3,5,2,7,9,12,15,18,20,25)
+
+```
+# find max value in vector
+max(sha)
+# find min value in vector
+min(sha)
+# find range of a vector
+range(sha) 
+# find sum value in vector
+sum(sha)
+# find length of the vector
+length(sha) 
+Mean_sha = sum(sha)/10
+sha+2
+sha*2
+sha^2
+#third element in a vector
+sha[3] 
+# fourth to eighth element in a vector
+sha[4:8]
+# Drop the first element in a vector
+sha[-1] 
+sha[-3]
+#Drop the last element of the vector
+sha[-length(sha)] 
+sha
+# concatenate sha and ssv
+ssv <- c(1,2,3,4,5,6,7,8,9,10)
+sha_ssv <- c(sha,ssv)
+sha_ssv
