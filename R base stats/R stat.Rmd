@@ -1,0 +1,63 @@
+---
+title: "R base stats"
+author: "SHA"
+date: "January 20, 2018"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+#Basic statistical Calculations
+weight <- c(60,72,57,90,95,72)
+class (weight)
+height <- c(1.75,1.80,1.65,1.90,1.74,1.91)
+data.frame(weight,height)
+summary(data.frame(weight,height))
+summary(weight)
+summary(height)
+mean(weight)
+mean(height)
+max(weight)
+max(height)
+min(weight)
+min(height)
+median(weight)
+median(height)
+```
+
+# comparision of means of different groups
+employees_weight<- c(56,67,65,78,49,87,55,63,70,72,79,52,60,78,90)
+employees_weight
+employees_gender<- c(1,1,1,2,1,2,1,1,1,2,1,1,1,2,2)
+# Using tapply function
+tapply(employees_weight,employees_gender,mean)
+tapply(employees_weight,employees_gender,max)
+tapply(employees_weight,employees_gender,min)
+tapply(employees_weight,employees_gender,summary)
+
+
+aggregate(employees_weight~employees_gender, FUN = mean)
+
+
